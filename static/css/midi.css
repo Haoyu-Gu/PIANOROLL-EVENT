@@ -3,7 +3,7 @@
 .midi-block h3.title { margin-bottom: .6rem; }
 
 /* =========================
-   主题 A：theme-yellow（旧 demo 风）
+   主题 A：theme-yellow（专业现代风格）
    ========================= */
 .midi-style.theme-yellow midi-player {
   display: block;
@@ -11,48 +11,52 @@
   margin: 4px 0 0;
 }
 .midi-style.theme-yellow midi-player::part(control-panel) {
-  background: #fffb99;         /* 更柔和的黄，避免太刺眼 */
-  border: 2px solid #000;
-  border-radius: 10px 10px 0 0;
-  padding: 6px 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px 12px 0 0;
+  padding: 8px 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 .midi-style.theme-yellow midi-player::part(play-button) {
-  color: #2e5e2e;
-  border: 2px solid currentColor;
-  background-color: #54d654;
-  border-radius: 18px;
-  transition: all .18s ease;
+  color: #ffffff;
+  border: none;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  transition: all .2s ease;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
 }
 .midi-style.theme-yellow midi-player::part(play-button):hover {
-  color: #0a7a0a;
-  background-color: #60eb60;
-  border-radius: 10px;
+  background-color: #2563eb;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.4);
 }
 .midi-style.theme-yellow midi-player::part(time) {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-  font-weight: 600;
+  font-weight: 500;
+  color: #475569;
 }
 
 /* 可视化容器（piano-roll / staff 都统一边框与圆角） */
 .midi-style.theme-yellow midi-visualizer .piano-roll-visualizer,
 .midi-style.theme-yellow midi-visualizer .staff-visualizer {
-  background: #fff8cc;
-  border: 2px solid #000;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-top: none;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 12px 12px;
   margin: 0 0 4px;
   overflow: auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
 }
 
 /* 音符样式（piano-roll） */
 .midi-style.theme-yellow midi-visualizer svg rect.note {
-  opacity: .7;
-  stroke-width: 2;
+  opacity: .85;
+  stroke-width: 1;
 }
-.midi-style.theme-yellow midi-visualizer svg rect.note[data-instrument="0"] { fill: #e33; stroke: #500; }
-.midi-style.theme-yellow midi-visualizer svg rect.note[data-instrument="2"] { fill: #2ee; stroke: #055; }
-.midi-style.theme-yellow midi-visualizer svg rect.note[data-is-drum="true"] { fill: #888; stroke: #888; }
-.midi-style.theme-yellow midi-visualizer svg rect.note.active { opacity: .95; stroke: #000; }
+.midi-style.theme-yellow midi-visualizer svg rect.note[data-instrument="0"] { fill: #3b82f6; stroke: #1d4ed8; }
+.midi-style.theme-yellow midi-visualizer svg rect.note[data-instrument="2"] { fill: #06b6d4; stroke: #0891b2; }
+.midi-style.theme-yellow midi-visualizer svg rect.note[data-is-drum="true"] { fill: #64748b; stroke: #475569; }
+.midi-style.theme-yellow midi-visualizer svg rect.note.active { opacity: 1; stroke: #1e293b; }
 
 /* =========================
    主题 B：theme-clean（中性卡片风，可选）
