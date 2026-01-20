@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <!-- Primary Meta Tags (Anonymized for double-blind review) -->
-  <meta name="title" content="Pianoroll-Event: Bridging Spatial and Sequential Representations for Efficient Music Generation">
-  <meta name="description" content="A novel symbolic music representation combining grid-based and discrete-event approaches for improved encoding efficiency.">
-  <meta name="keywords" content="symbolic music, music representation, pianoroll, music generation, deep learning">
-  <meta name="robots" content="noindex, nofollow">
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Pianoroll-Event: A Novel Score Representation for Symbolic Music">
+  <meta name="description" content="A novel symbolic music encoding that bridges grid-based and discrete-event representations through four complementary event types.">
+  <meta name="keywords" content="symbolic music representation, music encoding, music generation, sequence modeling">
+  <meta name="robots" content="index, follow">
   <meta name="language" content="English">
   
   <!-- Preconnect for performance -->
@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
 
-  <title>Pianoroll-Event: Bridging Spatial and Sequential Representations for Efficient Music Generation</title>
+  <title>Pianoroll-Event: A Novel Score Representation for Symbolic Music</title>
   
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -73,14 +73,32 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Pianoroll-Event: Bridging Spatial and Sequential Representations for Efficient Music Generation</h1>
+            <h1 class="title is-1 publication-title">Pianoroll-Event: A Novel Score Representation for Symbolic Music</h1>
             <div class="is-size-5 publication-authors">
-              <span class="author-block" style="color: #666; font-style: italic;">
-                Anonymous Submission to ICME 2026
+              <span class="author-block">
+                <a href="#">Lekai Qian</a><sup>*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://haoyu-gu.github.io/" target="_blank">Haoyu Gu</a><sup>*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="#">Dehan Li</a><sup>*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="#">Boyu Cao</a><sup>&dagger;</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://drliuqi.github.io/" target="_blank">Qi Liu</a><sup>&dagger;</sup>
               </span>
             </div>
-            <p style="margin-top: 1rem; color: #888; font-size: 0.9rem;">
-              <em>This page is for anonymous review purposes only.</em>
+            <div class="is-size-6 publication-authors" style="margin-top: 0.5rem;">
+              <span class="author-block">School of Future Technology, South China University of Technology</span>
+            </div>
+            <p style="margin-top: 0.5rem; color: #666; font-size: 0.85rem;">
+              <sup>*</sup>Equal contribution. <sup>&dagger;</sup>Corresponding authors.
+            </p>
+            <p style="margin-top: 1rem; color: #333; font-weight: 500;">
+              ICASSP 2026
             </p>
 
           </div>
@@ -116,18 +134,15 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Effective symbolic music representation remains a fundamental challenge in computational musicology.
+            Symbolic music representation is a fundamental challenge in computational musicology.
             While grid-based representations effectively preserve pitch-time spatial correspondence,
             their inherent data sparsity leads to low encoding efficiency.
             Discrete-event representations achieve compact encoding but
             fail to adequately capture structural invariance and spatial
-            locality. Graph-based methods model relational structures but
-            remain less compatible with autoregressive sequence modeling.
-            To address these limitations, we propose Pianoroll-Event, which
-            bridges spatial and sequential representations by transforming
-            pianoroll matrices into structured event sequences, achieving
-            encoding efficiency while preserving temporal dependencies and
-            local spatial patterns.
+            locality. To address these complementary limitations, we propose Pianoroll-Event,
+            a novel encoding scheme that describes pianoroll representations through events,
+            combining structural properties with encoding efficiency while maintaining
+            temporal dependencies and local spatial patterns.
             Specifically, we design four complementary event types:
             Frame Events for temporal boundaries, Gap Events for sparse
             regions, Pattern Events for note patterns, and Musical Structure
